@@ -90,7 +90,7 @@ LEARNING_RATE = 0.0005
 INPUT_SHAPE = (64, 64, 3)
 
 # Télécharger le dataset
-path = kagglehub.dataset_download("idrisskh/obstacles-dataset")
+path = kagglehub.dataset_download("brsdincer/vehicle-detection-image-set")
 
 print(f'Dataset téléchargé dans {path}')
 

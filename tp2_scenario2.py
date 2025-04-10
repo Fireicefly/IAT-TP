@@ -80,8 +80,8 @@ class QLearningAgent:
     def __init__(self, action_space):
         self.q_table = {}
         self.action_space = action_space
-        self.learning_rate = 0.1
-        self.gamma = 0.9
+        self.learning_rate = 0.001
+        self.gamma = 0.7
 
     def choose_action(self, state):
         if state not in self.q_table:
@@ -152,7 +152,7 @@ def evaluate_agent(agent, dataset):
 # Evaluate the agent after training
 accuracy, loss, recall, y_true, y_pred = evaluate_agent(agent, test_dataset)
 
-for episode in range(50):
+for episode in range(10):
     state = env.reset()
     done = False
     total_reward = 0
